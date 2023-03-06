@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li{
+  list-style: name;
+  margin: 0 20px;
+}
+
+ul li a{
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5;
+}
+
+ul:hover li a{
+  transform: scale(1.5);
+  opacity: 0.2;
+  filter: blur(5px);
+}
+
+ul li a:hover{
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0px);
+}
+
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+
+.btn {
+  padding: 15px 100px;
+  margin: 10px 4px ;
+  color: #fff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn {
+  box-shadow: inset 000px 0px 0px 0px #6098ff;
+  -webkit-transition: all 0.2s cubic-bezier(.9,.24,.40,1);
+  transition: all 0.2s cubic-bezier(.9,.24,.40,1)
+}
+
+.btn::before {
+  content: '';
+  width: 100%;
+  height: 0%;
+  display: block;
+  background: #80ffd3;
+  position: absolute;
+  left: 0%;
+  opacity: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: height .2s cubic-bezier(0.9, 1, 0.32, 1), opacity .1s ease;
+  transition: height .2s cubic-bezier(0.9, 1, 0.32, 1), opacity .1s ease;
+}
+
+.btn::hover::before {
+  opacity: 1;
+  height: 100%;
+}
+
+.btn:hover {
+  box-shadow: inset 00px 100px 0px 0px #6098FF;
+  color: #ffffff;
+}
